@@ -1,0 +1,64 @@
+index.html
+<nav class="my-menu">
+			   			<ul>
+			   				<li class="active"><a href="#">О КОМПАНИИ</a></li>
+			   				<li><a href="#">КАТАЛОГ</a>
+			   					<ul class="submenu">
+			   						<li><a href="#">Пластиковые фитинги</a> </li>
+			   						<li><a href="#">Пластиковые трубы</a></li>
+			   						<li><a href="#">Сварочное оборудование</a></li>
+			   					</ul>
+			   				</li>
+			   				<li><a href="#">ОПЛАТА/ДОСТАВКА</a></li>
+			   				<li><a href="#">ОПТОВИКАМ</a></li>
+			   				<li><a href="#">АКЦИИ</a></li>
+			   				<li><a href="#">КОНТАКТЫ</a></li>
+			   			</ul>
+
+</nav>
+
+CSS
+.my-menu
+		text-align: center
+		//width: 100%
+		margin-top: 20px
+		background: #efefef
+		li
+			padding: 10px 
+			opacity: 1
+			display: inline-block 
+			position: relative //Положение элемента устанавливается относительно его исходного места. Добавление свойств left, top, right и bottom изменяет позицию элемента
+			//justify-content: space-around
+			background: #fff
+			list-style: none
+			padding: 5px
+			border: 1px solid red
+			font-size: 23px
+			margin: 10px
+  			padding: 0
+
+			a
+				text-decoration: none
+				//transition: .4s ease-in-out
+
+			.submenu
+			visibility: hidden   // меню не видно в обычном состоянии
+			
+			padding: 0
+			margin: 5px
+			//border-bottom: 1px solid #efefef
+			//color: #484848
+			position: absolute //вложенное меню позиционируется абсолютно, в то время как основное меню position: relative
+			margin-left: 30px
+	
+			li
+				font-size: 14px
+				margin: 0px
+
+		
+	.my-menu li:hover .submenu
+		opacity: 50 // прозрачность
+		z-index: 5
+		visibility: visible //При наведении на пункт меню, становится видимым
+		font-size: 8px
+		width: 100%
